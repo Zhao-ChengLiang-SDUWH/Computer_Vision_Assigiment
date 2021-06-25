@@ -1,0 +1,11 @@
+<!--pages/index/index.wxml-->
+<view bindtouchend="touchEnd" bindtouchstart="touchStart" class="container">
+
+<van-row style="margin-top:60rpx;">
+			<van-col class="text2" bindtap="navigate1">开始扫描</van-col>
+			
+</van-row>
+<van-row style="margin-top:60rpx;">
+<van-col class="text2" bindtap="navigate2">三维重建</van-col>
+</van-row>
+</view>

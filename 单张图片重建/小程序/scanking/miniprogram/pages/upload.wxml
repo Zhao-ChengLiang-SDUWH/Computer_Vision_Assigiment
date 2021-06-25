@@ -1,0 +1,36 @@
+<!--pages/upload.wxml-->
+
+<!--  -->
+
+<!-- <van-button type="info" bindtap="img">开始</van-button> -->
+
+<van-grid column-num="1">
+  <van-grid-item text="原图" use-slot>
+    <image src="{{imgSrc}}"></image>
+  </van-grid-item>
+  <van-grid-item text="扫描效果" use-slot >
+    <image src='{{proUrl}}'></image>
+  </van-grid-item>
+</van-grid>
+
+<van-radio-group
+  value="{{ flag1 }}"
+  bind:change="onChange1"
+  direction="horizontal"
+>
+  <van-radio name="0">文本模式</van-radio>
+  <van-radio name="1">照片模式</van-radio>
+</van-radio-group>
+<van-radio-group
+  value="{{ flag2 }}"
+  bind:change="onChange2"
+  direction="horizontal"
+>
+  <van-radio name="0">普通效果</van-radio>
+  <van-radio name="1">去阴影效果</van-radio>
+</van-radio-group>
+<view class="chooseBtn">
+ 
+  <van-button round icon="add-o" disabled="{{changeStyle}}" type="primary" size="normal" class="upload" bindtap="chooseimg">选择照片</van-button>
+  <van-button round icon="exchange" disabled="{{changeStyle}}" type="info" size="normal"  class="upload" bindtap="generate">生成图片</van-button>
+</view>
